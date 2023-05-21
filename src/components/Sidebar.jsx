@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-const Sidebar = ({ setShowSidebar, items = [], total, setTotal }) => {
+const Sidebar = ({ setShowSidebar, cart = [], total, setTotal }) => {
   const [showCheckout, setShowCheckout] = useState(false)
   const changeCheckout = () => {
     setShowCheckout(!showCheckout)
@@ -14,7 +14,7 @@ const Sidebar = ({ setShowSidebar, items = [], total, setTotal }) => {
       <div className="flex flex-col justify-between">
         <div>
           <h2 className="text-xl font-bold mb-4">Resumen de compra</h2>
-          {items.map((item, i) => {
+          {cart.map((item, i) => {
             const { image, name, description, price } = item
             return (
               <div key={i} className="flex w-full bg-gray-300 shadow-md my-5 p-3 gap-5 rounded-xl">

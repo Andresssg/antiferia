@@ -2,7 +2,7 @@
 import { Link } from 'react-router-dom';
 import Cart from './Cart';
 
-const Navbar = ({ setShowSidebar, items }) => {
+const Navbar = ({ setShowSidebar, cart }) => {
 
   return (
     <nav className="bg-gray-800">
@@ -31,9 +31,15 @@ const Navbar = ({ setShowSidebar, items }) => {
               >
                 About
               </Link>
+              <Link
+                to="/GFA"
+                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md "
+              >
+                GFA
+              </Link>
             </div>
           </div>
-          <Cart setShowSidebar={setShowSidebar} items={items}/>
+          <Cart setShowSidebar={setShowSidebar} items={cart}/>
         </div>
       </div>
     </nav>
