@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes, } from "react-router-dom"
+import { BrowserRouter, HashRouter, Route, Routes, } from "react-router-dom"
 import Navbar from "./components/Navbar"
 import Home from "./routes/Home"
 import Products from "./routes/Products"
@@ -26,7 +26,7 @@ const App = () => {
   }
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <Navbar setShowSidebar={changeState} items={items} />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -35,7 +35,7 @@ const App = () => {
           <Route path="/checkout" element={<Checkout items={items} total={total}/>} />
         </Routes>
         {showSidebar && <Sidebar setShowSidebar={changeState} items={items} total={total} setTotal={changeTotal}/>}
-      </BrowserRouter>
+      </Hash>
     </>
   )
 }
