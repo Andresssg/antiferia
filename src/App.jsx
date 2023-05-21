@@ -29,13 +29,14 @@ const App = () => {
       <HashRouter>
         <Navbar setShowSidebar={changeState} items={items} />
         <Routes>
+          <Route index element={<Home />} />
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products items={items}/>} />
           <Route path="/about" element={<About />} />
           <Route path="/checkout" element={<Checkout items={items} total={total}/>} />
         </Routes>
         {showSidebar && <Sidebar setShowSidebar={changeState} items={items} total={total} setTotal={changeTotal}/>}
-      </Hash>
+      </HashRouter>
     </>
   )
 }
