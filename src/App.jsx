@@ -35,8 +35,8 @@ const App = () => {
     },
     {
       image: 'https://stayyclassyy.weebly.com/uploads/5/1/6/0/51607479/9995846_orig.png',
-      name: 'Vestido con estampado de flores', price: '32.000',
-      description: 'Chaqueta Harley Davidson usada por un año, con estilo icónico y un toque de rebeldía para lucir con actitud.'
+      name: 'Vestido con estampado de flores', price: '32000',
+      description: 'Vestido de diseño floral, usado tres veces y en excelente estado. Perfecto para ocasiones especiales.'
     },
     {
       image: 'https://media.vogue.co.uk/photos/6329d12daac5fc8b4ef083fd/master/w_1280%2Cc_limit/GOLDISGN.png',
